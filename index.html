@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Social links profile</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -13,22 +12,46 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'white': 'hsl(0, 0%, 100%)',
+            'grey': 'hsl(0, 0%, 30%)',
+            'darkGrey': 'hsl(0, 0%, 15%)',
+            'offBlack': 'hsl(0, 0%, 8%)',
+            'green': 'hsl(75, 94%, 57%)'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
+<body class="bg-offBlack flex h-screen flex-col justify-center px-12 py-12">
   
-  <div class="attribution">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm bg-darkGrey p-5 rounded-lg shadow-md">
+      <img class="mx-auto h-20 w-auto rounded-full" src="./assets/images/avatar-jessica.jpeg" alt="avatar-jessica">
+      <h2 class="mt-5 text-center text-2xl font-bold text-white">Jessica Randall</h2>
+      <p class="text-center text-xs mt-2 font-bold text-green">London, United Kingdom</p>
+
+      <p class="text-sm text-center mt-6 mb-8 text-white">"Front-end developer and avid reader."</p>
+      <div class="px-5 mb-5"> 
+        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">GitHub</button>
+        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">Frontend Mentor</button>
+        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">LinkedIn</button>
+        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">Twitter</button>
+        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">Instagram</button>
+      </div>
+    </div>
+ 
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
