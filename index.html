@@ -2,56 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Social links profile</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beep Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'white': 'hsl(0, 0%, 100%)',
-            'grey': 'hsl(0, 0%, 30%)',
-            'darkGrey': 'hsl(0, 0%, 15%)',
-            'offBlack': 'hsl(0, 0%, 8%)',
-            'green': 'hsl(75, 94%, 57%)'
-          },
-          fontFamily: {
-            'inter': ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-offBlack flex h-screen flex-col justify-center px-12 py-12">
-  
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm bg-darkGrey p-5 rounded-lg shadow-md">
-      <img class="mx-auto h-20 w-auto rounded-full" src="./assets/images/avatar-jessica.jpeg" alt="avatar-jessica">
-      <h2 class="mt-5 text-center text-2xl font-bold text-white">Jessica Randall</h2>
-      <p class="text-center text-xs mt-2 font-bold text-green">London, United Kingdom</p>
+<body class="bg-[#313874] font-quick-sand overflow-x-hidden ">
 
-      <p class="text-sm text-center mt-6 mb-8 text-white">"Front-end developer and avid reader."</p>
-      <div class="px-5 mb-5"> 
-        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">GitHub</button>
-        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">Frontend Mentor</button>
-        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">LinkedIn</button>
-        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">Twitter</button>
-        <button class="flex w-full justify-center rounded-md bg-grey mt-3 px-10 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-offBlack">Instagram</button>
-      </div>
+    <!-- navbar -->
+    <nav class="pt-2 border-gray-200 bg-[#313874]">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="./images/beep new branding_beep white_Logo.png" class="h-8" alt="Flowbite Logo" />
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:flex md:w-auto " id="navbar-default">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">          
+              <li>
+                <a class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">home</a>
+              </li>
+              <li>
+                <a class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">about Us</a>
+              </li>      
+              <li>
+                <a class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">beep™ card</a>
+              </li>
+              <li>
+                <a class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">beep™ app</a>
+              </li>
+              <li>
+                <a class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">beep™ business</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="mx-10 my-5 flex justify-between items-center rounded-3xl overflow-hidden flex bg-white round-lg">
+
+        <!-- left cards -->
+        <div class="flex flex-col lg:-ml-6 w-[30%] justify-center items-center ">
+            <div class="z-20 rotate-12 transition-transform duration-500
+                -translate-x-20 scale-125 
+                hover:rotate-0 hover:scale-100  
+                hover:translate-x-0 hover:-translate-y-0
+                hover:lg:translate-x-6 hover:lg:-translate-y-0
+             ">
+                <img data-aos="fade-down-right" data-aos-duration="1000" src="./images/cards/card-left1.svg" alt="Left Card 1" class="w-full h-auto" >
+            </div>
+            <div class="z-10 scale-110 -translate-x-32 transition-transform duration-500  
+                hover:z-20 hover:scale-100 hover:lg:translate-x-4
+                hover:-translate-x-1 
+            ">
+                <img data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000" src="./images/cards/card-left2.svg" alt="Left Card 2" class="w-full">
+            </div>
+            <div class="z-0 -rotate-12 scale-110 -translate-x-20 transition-transform duration-500
+                hover:z-20 hover:rotate-0 hover:lg:translate-x-8 hover:lg:translate-y-2
+                hover:translate-x-0 hover:translate-y-0
+            ">
+                <img data-aos="fade-up-right" data-aos-delay="800" data-aos-duration="1000" src="./images/cards/card-left3.svg" alt="Left Card 3" class="w-full">
+            </div>
+        </div>
+
+        <!-- hero -->
+        <div data-aos="fade-up"  data-aos-duration="1000" 
+            class="flex justify-center items-center w-[35%] ">
+            <div class="w-full text-center">
+                <section class="py-10 bg-white">
+                    <div class="mx-auto ">
+                        <div class="max-w-md mx-auto text-center font-fs-joey">
+                            <span class="text-2xl lg:text-3xl xl:text-4xl text-[#313874] font-black">Personalized Commute, Powered by </span>
+                            <span class="text-2xl lg:text-3xl xl:text-4xl font-black text-[#F8931D]"> You</span>    
+                        </div>
+                        <div class="max-w-sm mx-auto leading-3 text-center font-bold font-quick-sand">           
+                            <span class="text-[10px] lg:text-sm xl:text-base text-[#313874]">Make your beep™ card an extension of</span>
+                            <span class="text-[10px] lg:text-sm xl:text-base text-[#F8931D]">yourself.</span>
+                            <span class="text-[10px] lg:text-sm xl:text-base text-[#313874]">Personalize, tap, and travel in style.</span>               
+                        </div> 
+                    </div>
+                </section>
+                <button class="transition ease-in-out delay-150 bg-[#313874] hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 bg-[#313874] rounded-full shadow-lg text-white px-5 py-2 text-sm">Customize</button>
+            </div>
+        </div>
+
+        <!-- right cards -->       
+        <div class="flex flex-col lg:-mr-6 w-[30%] justify-center items-center ">
+            <!-- red card -->
+            <div class="z-0 scale-125 transition-transform duration-500 
+            translate-x-48  translate-y-20
+            hover:translate-x-4 hover:translate-y-30
+            lg:translate-x-48  lg:translate-y-36 
+            xl:translate-x-48  xl:translate-y-40 
+            hover:z-30 
+            hover:lg:-translate-x-8 hover:lg:translate-y-30
+            hover:xl:-translate-x-8 hover:xl:translate-y-30
+            ">
+                <img data-aos="fade-down-left" data-aos-duration="1000" src="./images/cards/card-right-red.jpg" alt="Right Card 1" class="w-full h-auto" >
+            </div>
+            <!-- blue card -->
+            <div class="z-10 scale-125 transition-transform duration-500  
+                translate-x-36 -translate-y-2
+                lg:translate-x-36 lg:translate-y-2
+                xl:translate-y-0
+                hover:z-30 hover:translate-x-4
+                hover:lg:-translate-x-9">
+                <img data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000" src="./images/cards/card-right-blue.jpg" alt="Right Card 2" class="w-full">
+            </div>
+            <!-- green card -->
+            <div class="z-20 w-full scale-125 transition-transform  duration-500
+                translate-x-20 -translate-y-24                
+                lg:translate-x-20 lg:-translate-y-32 
+                xl:translate-x-20 xl:-translate-y-40 
+                hover:z-20 hover:translate-x-3 
+                hover:lg:-translate-x-9 hover:lg:-translate-y-42
+                hover:xl:-translate-x-9 hover:xl:-translate-y-40">
+                <img data-aos="fade-up-left" data-aos-delay="800" data-aos-duration="1000" src="./images/cards/card-right-green.jpg" alt="Right Card 3" class="w-full">
+            </div>
+        </div>
+        
     </div>
- 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+
+    <div class="pb-10 my-10 flex-col rounded-tl-3xl w-full flex bg-white">
+        <div class="flex">  
+            <!-- Right box -->
+            <div data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000" class="my-10 mx-8 flex rounded-3xl justify-between w-full flex bg-[#DFE4FF] ">
+                <div class="flex flex-col py-8 lg:py-0 flex-col-reverse lg:flex-row justify-center items-center w-full ">                
+                    <section class="lg:pt-0 pt-4 mx-8 text-center">
+                        <div class="max-w-6xl ">
+                            <div class="max-w-md text-center lg:text-left font-fs-joey">
+                                <span class="text-xl lg:text-2xl text-[#313874] font-black">Your beep™, Your</span>
+                                <span class="text-xl lg:text-2xl font-black text-[#F8931D]">Design</span>    
+                            </div>
+                            <div class="max-w-sm text-center lg:text-left font-bold font-quick-sand">           
+                                <span class="text-xs lg:text-sm text-[#313874]">Personalize your daily commute with a customized beep™ card. Express yourself on the go!</span>
+                            </div> 
+                        </div>
+                    </section>
+                    
+                    <div class="flex justify-end items-center lg:m-5 w-1/2 lg:1/2 ">
+                        <img src="./images/undraw_make_it_rain_re_w9pc 1.svg" alt="Card Image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- left box -->
+            <div data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000" class="my-10 mx-8 flex rounded-3xl justify-between w-full flex bg-[#DFE4FF] ">
+                <div class="flex flex-col py-8 lg:py-0 flex-col-reverse lg:flex-row justify-center items-center w-full ">                
+                    <section class="pt-4 lg:py-12 lg:my-5 mx-8 text-center">
+                        <div class="max-w-6xl ">
+                            <div class="max-w-md text-center lg:text-left font-fs-joey">
+                                <span class="text-xl lg:text-2xl text-[#313874] font-black">Roll with</span>
+                                <span class="text-xl lg:text-2xl font-black text-[#F8931D]">Personality</span>    
+                            </div>
+                            <div class="max-w-sm text-center lg:text-left font-bold font-quick-sand">           
+                                <span class="text-xs lg:text-sm text-[#313874]">Why be bland when you can be bold? Roll with personality and use your customized Beep card on every journey.</span>
+                            </div> 
+                        </div>
+                    </section>
+                    <div class="flex justify-end items-center lg:m-5 w-1/2 lg:w-1/2 ">
+                        <img src="./images/undraw_travelers_re_y25a 1.svg" alt="Card Image" >
+                    </div>                
+                </div>
+            </div>         
+        </div>
+
+        <!-- last box -->
+        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" class="mx-8 py-0  justify-stretch items-center px-0 lg:px-20 flex rounded-3xl lg:justify-between flex-row bg-[#DFE4FF] ">
+            <div class="w-full flex items-center justify-center lg:p-0  p-5" >
+                <img src="./images/undraw_small_town_re_7mcn 1.svg" alt="undraw_small_town" >
+            </div>
+            <div class="flex justify-center items-center w-full">                
+                <section class="py-12 my-5 ">
+                    <div class="max-w-6xl ">
+                        <div class="max-w-md text-center font-fs-joey">
+                            <span class="text-xl lg:text-2xl text-[#313874] font-black">Share Your Style, Join the</span>
+                            <span class="text-xl lg:text-2xl font-black text-[#F8931D]">Community</span>    
+                        </div>
+                        <div class="mx-5 max-w-sm text-center font-bold font-quick-sand">           
+                            <span class="text-xs lg:text-sm text-[#313874]">Show off your personalized Beep card and be part of a community that celebrates individuality.</span>
+                        </div> 
+                    </div>
+                </section>
+            </div>
+            <div class="w-full flex items-center justify-center p-5">
+                <img src="./images/undraw_positive_attitude_re_wu7d 1.svg" alt="undraw_positive_attitude" class="w-52">
+            </div>
+        </div>
+    </div>
+     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            fontFamily: {
+                'quick-sand': ['Quicksand', 'sans-serif'],
+                'fs-joey': ['FS Joey Pro', 'sans-serif']
+            }
+            }
+        }
+        }
+    </script>
 </body>
 </html>
